@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aws_es_domain_ec2_subnet - goldfig Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>goldfig</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>aws_es_domain_ec2_subnet</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="domain_id">domain_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aws_es_domain_ec2_subnet.domain_id references aws_es_domain._id via aws_es_domain_ec2_subnet_domain_id_fkey"><a href='aws_es_domain.html'>aws_es_domain</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_es_domain_ec2_subnet_domain_id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="subnet_id">subnet_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aws_es_domain_ec2_subnet.subnet_id references aws_ec2_subnet._id via aws_es_domain_ec2_subnet_subnet_id_fkey"><a href='aws_ec2_subnet.html'>aws_ec2_subnet</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_es_domain_ec2_subnet_subnet_id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="provider_account_id">provider_account_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aws_es_domain_ec2_subnet.provider_account_id references provider_account.id via aws_es_domain_ec2_subnet_provider_account_id_fkey"><a href='provider_account.html'>provider_account</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">aws_es_domain_ec2_subnet_provider_account_id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> aws_es_domain_ec2_subnet_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>domain_id + subnet_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aws_ec2_subnet.html" target="_top" title="aws_ec2_subnet" alt="" coords="253,228,584,433">
+<area shape="rect" id="node2" href="provider_account.html" target="_top" title="provider_account" alt="" coords="5,257,209,375">
+<area shape="rect" id="node3" href="aws_es_domain.html" target="_top" title="aws_es_domain" alt="" coords="258,5,579,211">
+<area shape="rect" id="node4" href="aws_es_domain_ec2_subnet.html" target="_top" title="aws_es_domain_ec2_subnet" alt="" coords="628,196,985,353">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/aws_es_domain_ec2_subnet.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="aws_acm_certificate.html" target="_top" title="aws_acm_certificate" alt="" coords="2836,4219,3057,4307">
+<area shape="rect" id="node2" href="aws_organizations_account.html" target="_top" title="aws_organizations_account" alt="" coords="1664,4471,1939,4559">
+<area shape="rect" id="node3" href="resource.html" target="_top" title="resource" alt="" coords="311,4759,467,4847">
+<area shape="rect" id="node4" href="provider_account.html" target="_top" title="provider_account" alt="" coords="5,6737,209,6855">
+<area shape="rect" id="node93" href="aws_organizations_organizationalunit.html" target="_top" title="aws_organizations_organizationalunit" alt="" coords="1275,4545,1620,4633">
+<area shape="rect" id="node94" href="aws_organizations_root.html" target="_top" title="aws_organizations_root" alt="" coords="950,2783,1198,2871">
+<area shape="rect" id="node5" href="aws_apigateway_restapi.html" target="_top" title="aws_apigateway_restapi" alt="" coords="2016,1403,2265,1491">
+<area shape="rect" id="node6" href="aws_apigateway_stage.html" target="_top" title="aws_apigateway_stage" alt="" coords="2405,1365,2645,1453">
+<area shape="rect" id="node7" href="aws_apigatewayv2_api.html" target="_top" title="aws_apigatewayv2_api" alt="" coords="2021,1261,2260,1349">
+<area shape="rect" id="node8" href="aws_apigatewayv2_stage.html" target="_top" title="aws_apigatewayv2_stage" alt="" coords="2397,1260,2653,1348">
+<area shape="rect" id="node9" href="aws_autoscaling_autoscalinggroup.html" target="_top" title="aws_autoscaling_autoscalinggroup" alt="" coords="3298,8260,3626,8348">
+<area shape="rect" id="node10" href="aws_iam_role.html" target="_top" title="aws_iam_role" alt="" coords="2053,6716,2229,6804">
+<area shape="rect" id="node11" href="aws_autoscaling_launchconfiguration.html" target="_top" title="aws_autoscaling_launchconfiguration" alt="" coords="2774,7648,3119,7736">
+<area shape="rect" id="node12" href="aws_ec2_image.html" target="_top" title="aws_ec2_image" alt="" coords="2046,6965,2235,7053">
+<area shape="rect" id="node13" href="aws_iam_instanceprofile.html" target="_top" title="aws_iam_instanceprofile" alt="" coords="2399,6368,2652,6456">
+<area shape="rect" id="node14" href="aws_autoscaling_launchconfiguration_ec2_securitygroup.html" target="_top" title="aws_autoscaling_launchconfiguration_ec2_securitygroup" alt="" coords="3220,1425,3704,1513">
+<area shape="rect" id="node15" href="aws_ec2_securitygroup.html" target="_top" title="aws_ec2_securitygroup" alt="" coords="2403,1648,2648,1736">
+<area shape="rect" id="node35" href="aws_ec2_vpc.html" target="_top" title="aws_ec2_vpc" alt="" coords="2054,2256,2227,2344">
+<area shape="rect" id="node16" href="aws_cloudformation_stack.html" target="_top" title="aws_cloudformation_stack" alt="" coords="2391,6473,2659,6561">
+<area shape="rect" id="node17" href="aws_cloudformation_stack_sns_topic.html" target="_top" title="aws_cloudformation_stack_sns_topic" alt="" coords="2775,6473,3119,6561">
+<area shape="rect" id="node18" href="aws_sns_topic.html" target="_top" title="aws_sns_topic" alt="" coords="2049,5048,2233,5136">
+<area shape="rect" id="node19" href="aws_cloudfront_distribution.html" target="_top" title="aws_cloudfront_distribution" alt="" coords="2002,5904,2279,5992">
+<area shape="rect" id="node20" href="aws_cloudtrail_trail.html" target="_top" title="aws_cloudtrail_trail" alt="" coords="2417,1976,2634,2064">
+<area shape="rect" id="node21" href="aws_logs_loggroup.html" target="_top" title="aws_logs_loggroup" alt="" coords="2032,2115,2249,2203">
+<area shape="rect" id="node22" href="aws_s3_bucket.html" target="_top" title="aws_s3_bucket" alt="" coords="2047,1973,2234,2061">
+<area shape="rect" id="node23" href="aws_cloudwatch_compositealarm.html" target="_top" title="aws_cloudwatch_compositealarm" alt="" coords="1983,6009,2299,6097">
+<area shape="rect" id="node24" href="aws_cloudwatch_metric.html" target="_top" title="aws_cloudwatch_metric" alt="" coords="2017,3935,2265,4023">
+<area shape="rect" id="node25" href="aws_cloudwatch_metricalarm.html" target="_top" title="aws_cloudwatch_metricalarm" alt="" coords="2382,4664,2669,4752">
+<area shape="rect" id="node26" href="aws_cloudwatch_metricalarm_sns_topic.html" target="_top" title="aws_cloudwatch_metricalarm_sns_topic" alt="" coords="2765,5116,3128,5204">
+<area shape="rect" id="node27" href="aws_config_configurationrecorder.html" target="_top" title="aws_config_configurationrecorder" alt="" coords="2365,5931,2686,6019">
+<area shape="rect" id="node28" href="aws_dynamodb_backup.html" target="_top" title="aws_dynamodb_backup" alt="" coords="2401,7111,2650,7199">
+<area shape="rect" id="node29" href="aws_dynamodb_table.html" target="_top" title="aws_dynamodb_table" alt="" coords="2025,7071,2257,7159">
+<area shape="rect" id="node30" href="aws_ec2_address.html" target="_top" title="aws_ec2_address" alt="" coords="3953,4519,4157,4607">
+<area shape="rect" id="node31" href="aws_ec2_instance.html" target="_top" title="aws_ec2_instance" alt="" coords="2843,4628,3050,4716">
+<area shape="rect" id="node32" href="aws_ec2_networkinterface.html" target="_top" title="aws_ec2_networkinterface" alt="" coords="3329,2565,3595,2653">
+<area shape="rect" id="node36" href="aws_ec2_subnet.html" target="_top" title="aws_ec2_subnet" alt="" coords="2360,2292,2691,2497">
+<area shape="rect" id="node33" href="aws_ec2_defaults.html" target="_top" title="aws_ec2_defaults" alt="" coords="2039,6220,2243,6308">
+<area shape="rect" id="node34" href="aws_ec2_flowlog.html" target="_top" title="aws_ec2_flowlog" alt="" coords="2426,2515,2625,2603">
+<area shape="rect" id="node37" href="aws_ec2_instance_securitygroup.html" target="_top" title="aws_ec2_instance_securitygroup" alt="" coords="3305,1531,3619,1619">
+<area shape="rect" id="node38" href="aws_ec2_instance_volume.html" target="_top" title="aws_ec2_instance_volume" alt="" coords="3329,4628,3595,4716">
+<area shape="rect" id="node39" href="aws_ec2_volume.html" target="_top" title="aws_ec2_volume" alt="" coords="2041,3544,2240,3632">
+<area shape="rect" id="node40" href="aws_ec2_keypair.html" target="_top" title="aws_ec2_keypair" alt="" coords="2041,6325,2240,6413">
+<area shape="rect" id="node41" href="aws_ec2_networkinterface_securitygroup.html" target="_top" title="aws_ec2_networkinterface_securitygroup" alt="" coords="3869,1599,4240,1687">
+<area shape="rect" id="node42" href="aws_ec2_routetable.html" target="_top" title="aws_ec2_routetable" alt="" coords="2416,2833,2635,2921">
+<area shape="rect" id="node43" href="aws_ec2_snapshot.html" target="_top" title="aws_ec2_snapshot" alt="" coords="2419,3437,2632,3525">
+<area shape="rect" id="node44" href="aws_kms_key.html" target="_top" title="aws_kms_key" alt="" coords="2052,3403,2229,3491">
+<area shape="rect" id="node45" href="aws_ec2_vpcpeeringconnection.html" target="_top" title="aws_ec2_vpcpeeringconnection" alt="" coords="2373,2728,2677,2816">
+<area shape="rect" id="node46" href="aws_ecr_repository.html" target="_top" title="aws_ecr_repository" alt="" coords="2032,6431,2249,6519">
+<area shape="rect" id="node47" href="aws_ecs_cluster.html" target="_top" title="aws_ecs_cluster" alt="" coords="2043,6115,2239,6203">
+<area shape="rect" id="node48" href="aws_ecs_service.html" target="_top" title="aws_ecs_service" alt="" coords="2427,6792,2624,6880">
+<area shape="rect" id="node49" href="aws_ecs_task.html" target="_top" title="aws_ecs_task" alt="" coords="2437,4924,2614,5012">
+<area shape="rect" id="node50" href="aws_ecs_taskdefinition.html" target="_top" title="aws_ecs_taskdefinition" alt="" coords="2019,2649,2262,2737">
+<area shape="rect" id="node51" href="aws_eks_cluster.html" target="_top" title="aws_eks_cluster" alt="" coords="2427,6687,2623,6775">
+<area shape="rect" id="node52" href="aws_eks_nodegroup.html" target="_top" title="aws_eks_nodegroup" alt="" coords="2834,6687,3059,6775">
+<area shape="rect" id="node53" href="aws_eks_nodegroup_ec2_subnet.html" target="_top" title="aws_eks_nodegroup_ec2_subnet" alt="" coords="3305,6687,3619,6775">
+<area shape="rect" id="node54" href="aws_elasticbeanstalk_application.html" target="_top" title="aws_elasticbeanstalk_application" alt="" coords="1984,7957,2297,8045">
+<area shape="rect" id="node55" href="aws_elasticbeanstalk_applicationversion.html" target="_top" title="aws_elasticbeanstalk_applicationversion" alt="" coords="2343,8164,2708,8252">
+<area shape="rect" id="node56" href="aws_elasticbeanstalk_environment.html" target="_top" title="aws_elasticbeanstalk_environment" alt="" coords="2785,8365,3109,8453">
+<area shape="rect" id="node57" href="aws_elasticbeanstalk_environment_autoscaling_autoscalinggroup.html" target="_top" title="aws_elasticbeanstalk_environment_autoscaling_autoscalinggroup" alt="" coords="3783,8433,4327,8521">
+<area shape="rect" id="node58" href="aws_elasticbeanstalk_environment_autoscaling_launchconfiguratio.html" target="_top" title="aws_elasticbeanstalk_environment_autoscaling_launchconfiguratio" alt="" coords="3185,8365,3739,8453">
+<area shape="rect" id="node59" href="aws_elasticbeanstalk_environment_ec2_instance.html" target="_top" title="aws_elasticbeanstalk_environment_ec2_instance" alt="" coords="3251,8155,3673,8243">
+<area shape="rect" id="node60" href="aws_elb_listener.html" target="_top" title="aws_elb_listener" alt="" coords="2427,3899,2624,3987">
+<area shape="rect" id="node61" href="aws_elb_loadbalancer.html" target="_top" title="aws_elb_loadbalancer" alt="" coords="2023,3721,2258,3809">
+<area shape="rect" id="node62" href="aws_elbv2_listener.html" target="_top" title="aws_elbv2_listener" alt="" coords="2840,4412,3053,4500">
+<area shape="rect" id="node63" href="aws_elbv2_loadbalancer.html" target="_top" title="aws_elbv2_loadbalancer" alt="" coords="2400,3084,2651,3172">
+<area shape="rect" id="node64" href="aws_elbv2_listener_acm_certificate.html" target="_top" title="aws_elbv2_listener_acm_certificate" alt="" coords="3299,4219,3625,4307">
+<area shape="rect" id="node65" href="aws_elbv2_loadbalancer_ec2_securitygroup.html" target="_top" title="aws_elbv2_loadbalancer_ec2_securitygroup" alt="" coords="2752,2373,3141,2461">
+<area shape="rect" id="node66" href="aws_elbv2_targetgroup.html" target="_top" title="aws_elbv2_targetgroup" alt="" coords="2403,3295,2647,3383">
+<area shape="rect" id="node67" href="aws_elbv2_targetgroup_loadbalancer.html" target="_top" title="aws_elbv2_targetgroup_loadbalancer" alt="" coords="2776,3084,3117,3172">
+<area shape="rect" id="node68" href="aws_es_domain.html" target="_top" title="aws_es_domain" alt="" coords="2365,1753,2686,1959">
+<area shape="rect" id="node69" href="aws_es_domain_ec2_securitygroup.html" target="_top" title="aws_es_domain_ec2_securitygroup" alt="" coords="2782,1672,3111,1760">
+<area shape="rect" id="node70" href="aws_es_domain_ec2_subnet.html" target="_top" title="aws_es_domain_ec2_subnet" alt="" coords="2768,1988,3125,2145">
+<area shape="rect" id="node71" href="aws_iam_group.html" target="_top" title="aws_iam_group" alt="" coords="2045,7567,2236,7655">
+<area shape="rect" id="node72" href="aws_iam_group_user.html" target="_top" title="aws_iam_group_user" alt="" coords="2411,7637,2640,7725">
+<area shape="rect" id="node73" href="aws_iam_user.html" target="_top" title="aws_iam_user" alt="" coords="2051,7672,2231,7760">
+<area shape="rect" id="node74" href="aws_iam_grouppolicy.html" target="_top" title="aws_iam_grouppolicy" alt="" coords="2409,7953,2642,8041">
+<area shape="rect" id="node75" href="aws_iam_passwordpolicy.html" target="_top" title="aws_iam_passwordpolicy" alt="" coords="2011,5657,2270,5745">
+<area shape="rect" id="node76" href="aws_iam_policy.html" target="_top" title="aws_iam_policy" alt="" coords="2045,7461,2236,7549">
+<area shape="rect" id="node77" href="aws_iam_policy_group.html" target="_top" title="aws_iam_policy_group" alt="" coords="2405,7427,2646,7515">
+<area shape="rect" id="node78" href="aws_iam_policy_role.html" target="_top" title="aws_iam_policy_role" alt="" coords="2413,7321,2638,7409">
+<area shape="rect" id="node79" href="aws_iam_policy_user.html" target="_top" title="aws_iam_policy_user" alt="" coords="2411,7532,2640,7620">
+<area shape="rect" id="node80" href="aws_iam_policyversion.html" target="_top" title="aws_iam_policyversion" alt="" coords="2404,8059,2647,8147">
+<area shape="rect" id="node81" href="aws_iam_rolepolicy.html" target="_top" title="aws_iam_rolepolicy" alt="" coords="2417,6897,2634,6985">
+<area shape="rect" id="node82" href="aws_iam_rootaccount.html" target="_top" title="aws_iam_rootaccount" alt="" coords="2024,5763,2257,5851">
+<area shape="rect" id="node83" href="aws_iam_signingcertificate.html" target="_top" title="aws_iam_signingcertificate" alt="" coords="2391,7743,2660,7831">
+<area shape="rect" id="node84" href="aws_iam_userpolicy.html" target="_top" title="aws_iam_userpolicy" alt="" coords="2415,7848,2636,7936">
+<area shape="rect" id="node85" href="aws_lambda_alias.html" target="_top" title="aws_lambda_alias" alt="" coords="2843,2163,3050,2251">
+<area shape="rect" id="node86" href="aws_lambda_function.html" target="_top" title="aws_lambda_function" alt="" coords="2409,2187,2642,2275">
+<area shape="rect" id="node87" href="aws_lambda_alias_functionversion.html" target="_top" title="aws_lambda_alias_functionversion" alt="" coords="3299,2163,3625,2251">
+<area shape="rect" id="node88" href="aws_lambda_functionversion.html" target="_top" title="aws_lambda_functionversion" alt="" coords="2804,2479,3089,2567">
+<area shape="rect" id="node89" href="aws_lambda_function_ec2_securitygroup.html" target="_top" title="aws_lambda_function_ec2_securitygroup" alt="" coords="2761,1883,3132,1971">
+<area shape="rect" id="node90" href="aws_lambda_function_ec2_subnet.html" target="_top" title="aws_lambda_function_ec2_subnet" alt="" coords="2786,2268,3107,2356">
+<area shape="rect" id="node91" href="aws_logs_metricfilter.html" target="_top" title="aws_logs_metricfilter" alt="" coords="2411,3189,2640,3277">
+<area shape="rect" id="node92" href="aws_logs_metricfilter_cloudwatch_metric.html" target="_top" title="aws_logs_metricfilter_cloudwatch_metric" alt="" coords="2762,3189,3131,3277">
+<area shape="rect" id="node95" href="aws_organizations_organization.html" target="_top" title="aws_organizations_organization" alt="" coords="568,2711,873,2799">
+<area shape="rect" id="node96" href="aws_rds_dbcluster.html" target="_top" title="aws_rds_dbcluster" alt="" coords="2034,1580,2247,1668">
+<area shape="rect" id="node97" href="aws_rds_dbcluster_ec2_securitygroup.html" target="_top" title="aws_rds_dbcluster_ec2_securitygroup" alt="" coords="2771,1317,3122,1405">
+<area shape="rect" id="node98" href="aws_rds_dbclustersnapshot.html" target="_top" title="aws_rds_dbclustersnapshot" alt="" coords="2387,2940,2664,3028">
+<area shape="rect" id="node99" href="aws_rds_dbinstance.html" target="_top" title="aws_rds_dbinstance" alt="" coords="2413,1507,2637,1595">
+<area shape="rect" id="node100" href="aws_rds_dbinstance_ec2_securitygroup.html" target="_top" title="aws_rds_dbinstance_ec2_securitygroup" alt="" coords="2766,1423,3127,1511">
+<area shape="rect" id="node101" href="aws_rds_dbsnapshot.html" target="_top" title="aws_rds_dbsnapshot" alt="" coords="2832,3329,3061,3417">
+<area shape="rect" id="node102" href="aws_redshift_cluster.html" target="_top" title="aws_redshift_cluster" alt="" coords="2413,2081,2638,2169">
+<area shape="rect" id="node103" href="aws_redshift_cluster_ec2_securitygroup.html" target="_top" title="aws_redshift_cluster_ec2_securitygroup" alt="" coords="2765,1777,3129,1865">
+<area shape="rect" id="node104" href="aws_route53_hostedzone.html" target="_top" title="aws_route53_hostedzone" alt="" coords="2012,7212,2269,7300">
+<area shape="rect" id="node105" href="aws_route53_hostedzone_ec2_vpc.html" target="_top" title="aws_route53_hostedzone_ec2_vpc" alt="" coords="2364,7216,2687,7304">
+<area shape="rect" id="node106" href="aws_ses_identity.html" target="_top" title="aws_ses_identity" alt="" coords="2425,5048,2625,5136">
+<area shape="rect" id="node107" href="aws_sns_subscription.html" target="_top" title="aws_sns_subscription" alt="" coords="2407,5495,2644,5583">
+<area shape="rect" id="node108" href="aws_sqs_queue.html" target="_top" title="aws_sqs_queue" alt="" coords="2429,3543,2621,3631">
+<area shape="rect" id="node109" href="aws_ssm_parameter.html" target="_top" title="aws_ssm_parameter" alt="" coords="2413,3648,2637,3736">
+<area shape="rect" id="node110" href="import_job.html" target="_top" title="import_job" alt="" coords="310,9215,467,9303">
+<area shape="rect" id="node111" href="mapped_uri.html" target="_top" title="mapped_uri" alt="" coords="992,9179,1156,9267">
+<area shape="rect" id="node112" href="raw_import.html" target="_top" title="raw_import" alt="" coords="641,9179,801,9267">
+<area shape="rect" id="node113" href="provider_credential.html" target="_top" title="provider_credential" alt="" coords="280,9356,497,9444">
+<area shape="rect" id="node114" href="resource_attribute.html" target="_top" title="resource_attribute" alt="" coords="616,6548,825,6636">
+<area shape="rect" id="node115" href="resource_attribute_delta.html" target="_top" title="resource_attribute_delta" alt="" coords="948,9355,1200,9443">
+<area shape="rect" id="node116" href="resource_delta.html" target="_top" title="resource_delta" alt="" coords="628,9320,813,9408">
+<area shape="rect" id="node117" href="resource_raw.html" target="_top" title="resource_raw" alt="" coords="633,6653,809,6741">
+<area shape="rect" id="node118" href="resource_relation.html" target="_top" title="resource_relation" alt="" coords="619,6443,823,6531">
+<area shape="rect" id="node119" href="resource_relation_attribute.html" target="_top" title="resource_relation_attribute" alt="" coords="253,9603,524,9691">
+<area shape="rect" id="node120" href="resource_relation_attribute_delta.html" target="_top" title="resource_relation_attribute_delta" alt="" coords="917,9512,1231,9600">
+<area shape="rect" id="node121" href="resource_relation_delta.html" target="_top" title="resource_relation_delta" alt="" coords="598,9461,843,9549">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/aws_es_domain_ec2_subnet.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

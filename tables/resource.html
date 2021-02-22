@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>resource - goldfig Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>goldfig</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>resource</h1><p><span id="recordNumber">594</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>serial</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>nextval(&#39;resource_id_seq&#39;::regclass)</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aws_acm_certificate._id references resource.id via aws_acm_certificate__id_fkey"><a href='aws_acm_certificate.html'>aws_acm_certificate</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_acm_certificate__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_apigateway_restapi._id references resource.id via aws_apigateway_restapi__id_fkey"><a href='aws_apigateway_restapi.html'>aws_apigateway_restapi</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_apigateway_restapi__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_apigateway_stage._id references resource.id via aws_apigateway_stage__id_fkey"><a href='aws_apigateway_stage.html'>aws_apigateway_stage</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_apigateway_stage__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_apigatewayv2_api._id references resource.id via aws_apigatewayv2_api__id_fkey"><a href='aws_apigatewayv2_api.html'>aws_apigatewayv2_api</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_apigatewayv2_api__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_apigatewayv2_stage._id references resource.id via aws_apigatewayv2_stage__id_fkey"><a href='aws_apigatewayv2_stage.html'>aws_apigatewayv2_stage</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_apigatewayv2_stage__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_autoscaling_autoscalinggroup._id references resource.id via aws_autoscaling_autoscalinggroup__id_fkey"><a href='aws_autoscaling_autoscalinggroup.html'>aws_autoscaling_autoscalinggroup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_autoscaling_autoscalinggroup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_autoscaling_launchconfiguration._id references resource.id via aws_autoscaling_launchconfiguration__id_fkey"><a href='aws_autoscaling_launchconfiguration.html'>aws_autoscaling_launchconfiguration</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_autoscaling_launchconfiguration__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudformation_stack._id references resource.id via aws_cloudformation_stack__id_fkey"><a href='aws_cloudformation_stack.html'>aws_cloudformation_stack</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudformation_stack__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudfront_distribution._id references resource.id via aws_cloudfront_distribution__id_fkey"><a href='aws_cloudfront_distribution.html'>aws_cloudfront_distribution</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudfront_distribution__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudtrail_trail._id references resource.id via aws_cloudtrail_trail__id_fkey"><a href='aws_cloudtrail_trail.html'>aws_cloudtrail_trail</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudtrail_trail__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudwatch_compositealarm._id references resource.id via aws_cloudwatch_compositealarm__id_fkey"><a href='aws_cloudwatch_compositealarm.html'>aws_cloudwatch_compositealarm</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudwatch_compositealarm__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudwatch_metric._id references resource.id via aws_cloudwatch_metric__id_fkey"><a href='aws_cloudwatch_metric.html'>aws_cloudwatch_metric</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudwatch_metric__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_cloudwatch_metricalarm._id references resource.id via aws_cloudwatch_metricalarm__id_fkey"><a href='aws_cloudwatch_metricalarm.html'>aws_cloudwatch_metricalarm</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_cloudwatch_metricalarm__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_config_configurationrecorder._id references resource.id via aws_config_configurationrecorder__id_fkey"><a href='aws_config_configurationrecorder.html'>aws_config_configurationrecorder</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_config_configurationrecorder__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_dynamodb_backup._id references resource.id via aws_dynamodb_backup__id_fkey"><a href='aws_dynamodb_backup.html'>aws_dynamodb_backup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_dynamodb_backup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_dynamodb_table._id references resource.id via aws_dynamodb_table__id_fkey"><a href='aws_dynamodb_table.html'>aws_dynamodb_table</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_dynamodb_table__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_address._id references resource.id via aws_ec2_address__id_fkey"><a href='aws_ec2_address.html'>aws_ec2_address</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_address__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_defaults._id references resource.id via aws_ec2_defaults__id_fkey"><a href='aws_ec2_defaults.html'>aws_ec2_defaults</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_defaults__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_flowlog._id references resource.id via aws_ec2_flowlog__id_fkey"><a href='aws_ec2_flowlog.html'>aws_ec2_flowlog</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_flowlog__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_image._id references resource.id via aws_ec2_image__id_fkey"><a href='aws_ec2_image.html'>aws_ec2_image</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_image__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_instance._id references resource.id via aws_ec2_instance__id_fkey"><a href='aws_ec2_instance.html'>aws_ec2_instance</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_instance__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_keypair._id references resource.id via aws_ec2_keypair__id_fkey"><a href='aws_ec2_keypair.html'>aws_ec2_keypair</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_keypair__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_networkinterface._id references resource.id via aws_ec2_networkinterface__id_fkey"><a href='aws_ec2_networkinterface.html'>aws_ec2_networkinterface</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_networkinterface__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_routetable._id references resource.id via aws_ec2_routetable__id_fkey"><a href='aws_ec2_routetable.html'>aws_ec2_routetable</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_routetable__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_securitygroup._id references resource.id via aws_ec2_securitygroup__id_fkey"><a href='aws_ec2_securitygroup.html'>aws_ec2_securitygroup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_securitygroup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_snapshot._id references resource.id via aws_ec2_snapshot__id_fkey"><a href='aws_ec2_snapshot.html'>aws_ec2_snapshot</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_snapshot__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_subnet._id references resource.id via aws_ec2_subnet__id_fkey"><a href='aws_ec2_subnet.html'>aws_ec2_subnet</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_subnet__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_volume._id references resource.id via aws_ec2_volume__id_fkey"><a href='aws_ec2_volume.html'>aws_ec2_volume</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_volume__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_vpc._id references resource.id via aws_ec2_vpc__id_fkey"><a href='aws_ec2_vpc.html'>aws_ec2_vpc</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_vpc__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ec2_vpcpeeringconnection._id references resource.id via aws_ec2_vpcpeeringconnection__id_fkey"><a href='aws_ec2_vpcpeeringconnection.html'>aws_ec2_vpcpeeringconnection</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ec2_vpcpeeringconnection__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ecr_repository._id references resource.id via aws_ecr_repository__id_fkey"><a href='aws_ecr_repository.html'>aws_ecr_repository</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ecr_repository__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ecs_cluster._id references resource.id via aws_ecs_cluster__id_fkey"><a href='aws_ecs_cluster.html'>aws_ecs_cluster</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ecs_cluster__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ecs_service._id references resource.id via aws_ecs_service__id_fkey"><a href='aws_ecs_service.html'>aws_ecs_service</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ecs_service__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ecs_task._id references resource.id via aws_ecs_task__id_fkey"><a href='aws_ecs_task.html'>aws_ecs_task</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ecs_task__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ecs_taskdefinition._id references resource.id via aws_ecs_taskdefinition__id_fkey"><a href='aws_ecs_taskdefinition.html'>aws_ecs_taskdefinition</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ecs_taskdefinition__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_eks_cluster._id references resource.id via aws_eks_cluster__id_fkey"><a href='aws_eks_cluster.html'>aws_eks_cluster</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_eks_cluster__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_eks_nodegroup._id references resource.id via aws_eks_nodegroup__id_fkey"><a href='aws_eks_nodegroup.html'>aws_eks_nodegroup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_eks_nodegroup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elasticbeanstalk_application._id references resource.id via aws_elasticbeanstalk_application__id_fkey"><a href='aws_elasticbeanstalk_application.html'>aws_elasticbeanstalk_application</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elasticbeanstalk_application__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elasticbeanstalk_applicationversion._id references resource.id via aws_elasticbeanstalk_applicationversion__id_fkey"><a href='aws_elasticbeanstalk_applicationversion.html'>aws_elasticbeanstalk_applicationversion</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elasticbeanstalk_applicationversion__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elasticbeanstalk_environment._id references resource.id via aws_elasticbeanstalk_environment__id_fkey"><a href='aws_elasticbeanstalk_environment.html'>aws_elasticbeanstalk_environment</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elasticbeanstalk_environment__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elb_listener._id references resource.id via aws_elb_listener__id_fkey"><a href='aws_elb_listener.html'>aws_elb_listener</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elb_listener__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elb_loadbalancer._id references resource.id via aws_elb_loadbalancer__id_fkey"><a href='aws_elb_loadbalancer.html'>aws_elb_loadbalancer</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elb_loadbalancer__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elbv2_listener._id references resource.id via aws_elbv2_listener__id_fkey"><a href='aws_elbv2_listener.html'>aws_elbv2_listener</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elbv2_listener__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elbv2_loadbalancer._id references resource.id via aws_elbv2_loadbalancer__id_fkey"><a href='aws_elbv2_loadbalancer.html'>aws_elbv2_loadbalancer</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elbv2_loadbalancer__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_elbv2_targetgroup._id references resource.id via aws_elbv2_targetgroup__id_fkey"><a href='aws_elbv2_targetgroup.html'>aws_elbv2_targetgroup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_elbv2_targetgroup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_es_domain._id references resource.id via aws_es_domain__id_fkey"><a href='aws_es_domain.html'>aws_es_domain</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_es_domain__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_group._id references resource.id via aws_iam_group__id_fkey"><a href='aws_iam_group.html'>aws_iam_group</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_group__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_grouppolicy._id references resource.id via aws_iam_grouppolicy__id_fkey"><a href='aws_iam_grouppolicy.html'>aws_iam_grouppolicy</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_grouppolicy__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_instanceprofile._id references resource.id via aws_iam_instanceprofile__id_fkey"><a href='aws_iam_instanceprofile.html'>aws_iam_instanceprofile</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_instanceprofile__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_passwordpolicy._id references resource.id via aws_iam_passwordpolicy__id_fkey"><a href='aws_iam_passwordpolicy.html'>aws_iam_passwordpolicy</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_passwordpolicy__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_policy._id references resource.id via aws_iam_policy__id_fkey"><a href='aws_iam_policy.html'>aws_iam_policy</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_policy__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_policyversion._id references resource.id via aws_iam_policyversion__id_fkey"><a href='aws_iam_policyversion.html'>aws_iam_policyversion</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_policyversion__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_role._id references resource.id via aws_iam_role__id_fkey"><a href='aws_iam_role.html'>aws_iam_role</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_role__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_rolepolicy._id references resource.id via aws_iam_rolepolicy__id_fkey"><a href='aws_iam_rolepolicy.html'>aws_iam_rolepolicy</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_rolepolicy__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_rootaccount._id references resource.id via aws_iam_rootaccount__id_fkey"><a href='aws_iam_rootaccount.html'>aws_iam_rootaccount</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_rootaccount__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_signingcertificate._id references resource.id via aws_iam_signingcertificate__id_fkey"><a href='aws_iam_signingcertificate.html'>aws_iam_signingcertificate</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_signingcertificate__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_user._id references resource.id via aws_iam_user__id_fkey"><a href='aws_iam_user.html'>aws_iam_user</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_user__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_iam_userpolicy._id references resource.id via aws_iam_userpolicy__id_fkey"><a href='aws_iam_userpolicy.html'>aws_iam_userpolicy</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_iam_userpolicy__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_kms_key._id references resource.id via aws_kms_key__id_fkey"><a href='aws_kms_key.html'>aws_kms_key</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_kms_key__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_lambda_alias._id references resource.id via aws_lambda_alias__id_fkey"><a href='aws_lambda_alias.html'>aws_lambda_alias</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_lambda_alias__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_lambda_function._id references resource.id via aws_lambda_function__id_fkey"><a href='aws_lambda_function.html'>aws_lambda_function</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_lambda_function__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_lambda_functionversion._id references resource.id via aws_lambda_functionversion__id_fkey"><a href='aws_lambda_functionversion.html'>aws_lambda_functionversion</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_lambda_functionversion__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_logs_loggroup._id references resource.id via aws_logs_loggroup__id_fkey"><a href='aws_logs_loggroup.html'>aws_logs_loggroup</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_logs_loggroup__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_logs_metricfilter._id references resource.id via aws_logs_metricfilter__id_fkey"><a href='aws_logs_metricfilter.html'>aws_logs_metricfilter</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_logs_metricfilter__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_organizations_account._id references resource.id via aws_organizations_account__id_fkey"><a href='aws_organizations_account.html'>aws_organizations_account</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_organizations_account__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_organizations_organization._id references resource.id via aws_organizations_organization__id_fkey"><a href='aws_organizations_organization.html'>aws_organizations_organization</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_organizations_organization__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_organizations_organizationalunit._id references resource.id via aws_organizations_organizationalunit__id_fkey"><a href='aws_organizations_organizationalunit.html'>aws_organizations_organizationalunit</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_organizations_organizationalunit__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_organizations_root._id references resource.id via aws_organizations_root__id_fkey"><a href='aws_organizations_root.html'>aws_organizations_root</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_organizations_root__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_rds_dbcluster._id references resource.id via aws_rds_dbcluster__id_fkey"><a href='aws_rds_dbcluster.html'>aws_rds_dbcluster</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_rds_dbcluster__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_rds_dbclustersnapshot._id references resource.id via aws_rds_dbclustersnapshot__id_fkey"><a href='aws_rds_dbclustersnapshot.html'>aws_rds_dbclustersnapshot</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_rds_dbclustersnapshot__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_rds_dbinstance._id references resource.id via aws_rds_dbinstance__id_fkey"><a href='aws_rds_dbinstance.html'>aws_rds_dbinstance</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_rds_dbinstance__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_rds_dbsnapshot._id references resource.id via aws_rds_dbsnapshot__id_fkey"><a href='aws_rds_dbsnapshot.html'>aws_rds_dbsnapshot</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_rds_dbsnapshot__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_redshift_cluster._id references resource.id via aws_redshift_cluster__id_fkey"><a href='aws_redshift_cluster.html'>aws_redshift_cluster</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_redshift_cluster__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_route53_hostedzone._id references resource.id via aws_route53_hostedzone__id_fkey"><a href='aws_route53_hostedzone.html'>aws_route53_hostedzone</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_route53_hostedzone__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_s3_bucket._id references resource.id via aws_s3_bucket__id_fkey"><a href='aws_s3_bucket.html'>aws_s3_bucket</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_s3_bucket__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ses_identity._id references resource.id via aws_ses_identity__id_fkey"><a href='aws_ses_identity.html'>aws_ses_identity</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ses_identity__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_sns_subscription._id references resource.id via aws_sns_subscription__id_fkey"><a href='aws_sns_subscription.html'>aws_sns_subscription</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_sns_subscription__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_sns_topic._id references resource.id via aws_sns_topic__id_fkey"><a href='aws_sns_topic.html'>aws_sns_topic</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_sns_topic__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_sqs_queue._id references resource.id via aws_sqs_queue__id_fkey"><a href='aws_sqs_queue.html'>aws_sqs_queue</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_sqs_queue__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aws_ssm_parameter._id references resource.id via aws_ssm_parameter__id_fkey"><a href='aws_ssm_parameter.html'>aws_ssm_parameter</a><span class='relatedKey'>._id</span></td>
+                                                <td class="constraint detail">aws_ssm_parameter__id_fkey<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_attribute.resource_id references resource.id via resource_attribute_resource_id_fkey"><a href='resource_attribute.html'>resource_attribute</a><span class='relatedKey'>.resource_id</span></td>
+                                                <td class="constraint detail">resource_attribute_resource_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_raw.resource_id references resource.id via resource_raw_resource_id_fkey"><a href='resource_raw.html'>resource_raw</a><span class='relatedKey'>.resource_id</span></td>
+                                                <td class="constraint detail">resource_raw_resource_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_relation.resource_id references resource.id via resource_relation_resource_id_fkey"><a href='resource_relation.html'>resource_relation</a><span class='relatedKey'>.resource_id</span></td>
+                                                <td class="constraint detail">resource_relation_resource_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_relation.target_id references resource.id via resource_relation_target_id_fkey"><a href='resource_relation.html'>resource_relation</a><span class='relatedKey'>.target_id</span></td>
+                                                <td class="constraint detail">resource_relation_target_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="path">path</span></td>
+                                    <td>varchar</td>
+                                    <td>1024</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="uri">uri</span></td>
+                                    <td>varchar</td>
+                                    <td>1024</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="name">name</span></td>
+                                    <td>varchar</td>
+                                    <td>256</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="provider_account_id">provider_account_id</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="resource.provider_account_id references provider_account.id via resource_provider_account_id_fkey"><a href='provider_account.html'>provider_account</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">resource_provider_account_id_fkey<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="provider_type">provider_type</span></td>
+                                    <td>varchar</td>
+                                    <td>1024</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="service">service</span></td>
+                                    <td>varchar</td>
+                                    <td>245</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="category">category</span></td>
+                                    <td>resource_type</td>
+                                    <td>2147483647</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> resource_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> resource_provider_account_id_uri_key</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>provider_account_id + uri</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>service_provider_type_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>service + provider_type</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 class="box-title">Check Constraints</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="check_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Constraint</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>resource_check</td>
+                                    <td>(((NOT (category IS NULL)) OR (NOT (provider_type IS NULL))))</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="aws_acm_certificate.html" target="_top" title="aws_acm_certificate" alt="" coords="2176,3864,2603,4040">
+<area shape="rect" id="node2" href="aws_organizations_account.html" target="_top" title="aws_organizations_account" alt="" coords="1837,5710,2132,5915">
+<area shape="rect" id="node3" href="resource.html" target="_top" title="resource" alt="" coords="253,6759,676,7063">
+<area shape="rect" id="node4" href="provider_account.html" target="_top" title="provider_account" alt="" coords="5,8448,209,8566">
+<area shape="rect" id="node69" href="aws_organizations_organizationalunit.html" target="_top" title="aws_organizations_organizationalunit" alt="" coords="1404,6546,1793,6751">
+<area shape="rect" id="node70" href="aws_organizations_root.html" target="_top" title="aws_organizations_root" alt="" coords="1100,6572,1360,6748">
+<area shape="rect" id="node5" href="aws_apigateway_restapi.html" target="_top" title="aws_apigateway_restapi" alt="" coords="2243,3442,2536,3618">
+<area shape="rect" id="node6" href="aws_apigateway_stage.html" target="_top" title="aws_apigateway_stage" alt="" coords="2763,3139,3018,3344">
+<area shape="rect" id="node7" href="aws_apigatewayv2_api.html" target="_top" title="aws_apigatewayv2_api" alt="" coords="2243,3671,2536,3847">
+<area shape="rect" id="node8" href="aws_apigatewayv2_stage.html" target="_top" title="aws_apigatewayv2_stage" alt="" coords="2728,3603,3053,3808">
+<area shape="rect" id="node9" href="aws_autoscaling_autoscalinggroup.html" target="_top" title="aws_autoscaling_autoscalinggroup" alt="" coords="3629,2727,3995,2962">
+<area shape="rect" id="node10" href="aws_iam_role.html" target="_top" title="aws_iam_role" alt="" coords="2241,2790,2537,2966">
+<area shape="rect" id="node11" href="aws_autoscaling_launchconfiguration.html" target="_top" title="aws_autoscaling_launchconfiguration" alt="" coords="3189,4952,3575,5187">
+<area shape="rect" id="node12" href="aws_ec2_image.html" target="_top" title="aws_ec2_image" alt="" coords="2267,7450,2511,7626">
+<area shape="rect" id="node13" href="aws_iam_instanceprofile.html" target="_top" title="aws_iam_instanceprofile" alt="" coords="2757,5430,3025,5635">
+<area shape="rect" id="node14" href="aws_cloudformation_stack.html" target="_top" title="aws_cloudformation_stack" alt="" coords="2736,1818,3045,2023">
+<area shape="rect" id="node15" href="aws_cloudfront_distribution.html" target="_top" title="aws_cloudfront_distribution" alt="" coords="2228,4359,2551,4535">
+<area shape="rect" id="node16" href="aws_cloudtrail_trail.html" target="_top" title="aws_cloudtrail_trail" alt="" coords="2705,4408,3077,4643">
+<area shape="rect" id="node17" href="aws_logs_loggroup.html" target="_top" title="aws_logs_loggroup" alt="" coords="2275,4094,2504,4270">
+<area shape="rect" id="node18" href="aws_s3_bucket.html" target="_top" title="aws_s3_bucket" alt="" coords="2253,4552,2526,4728">
+<area shape="rect" id="node19" href="aws_cloudwatch_compositealarm.html" target="_top" title="aws_cloudwatch_compositealarm" alt="" coords="2193,4818,2586,4994">
+<area shape="rect" id="node20" href="aws_cloudwatch_metric.html" target="_top" title="aws_cloudwatch_metric" alt="" coords="2259,955,2520,1131">
+<area shape="rect" id="node21" href="aws_cloudwatch_metricalarm.html" target="_top" title="aws_cloudwatch_metricalarm" alt="" coords="2694,852,3087,1058">
+<area shape="rect" id="node22" href="aws_config_configurationrecorder.html" target="_top" title="aws_config_configurationrecorder" alt="" coords="2713,2040,3068,2246">
+<area shape="rect" id="node23" href="aws_dynamodb_backup.html" target="_top" title="aws_dynamodb_backup" alt="" coords="2756,1140,3025,1346">
+<area shape="rect" id="node24" href="aws_dynamodb_table.html" target="_top" title="aws_dynamodb_table" alt="" coords="2223,1220,2556,1396">
+<area shape="rect" id="node25" href="aws_ec2_address.html" target="_top" title="aws_ec2_address" alt="" coords="4039,6995,4316,7230">
+<area shape="rect" id="node26" href="aws_ec2_instance.html" target="_top" title="aws_ec2_instance" alt="" coords="3179,7547,3585,7840">
+<area shape="rect" id="node27" href="aws_ec2_networkinterface.html" target="_top" title="aws_ec2_networkinterface" alt="" coords="3669,7054,3955,7318">
+<area shape="rect" id="node30" href="aws_ec2_vpc.html" target="_top" title="aws_ec2_vpc" alt="" coords="2239,7184,2539,7360">
+<area shape="rect" id="node31" href="aws_ec2_subnet.html" target="_top" title="aws_ec2_subnet" alt="" coords="2725,8199,3056,8404">
+<area shape="rect" id="node28" href="aws_ec2_defaults.html" target="_top" title="aws_ec2_defaults" alt="" coords="2257,6703,2521,6879">
+<area shape="rect" id="node29" href="aws_ec2_flowlog.html" target="_top" title="aws_ec2_flowlog" alt="" coords="2752,4018,3029,4311">
+<area shape="rect" id="node32" href="aws_ec2_keypair.html" target="_top" title="aws_ec2_keypair" alt="" coords="2275,1450,2504,1626">
+<area shape="rect" id="node33" href="aws_ec2_routetable.html" target="_top" title="aws_ec2_routetable" alt="" coords="2776,4696,3005,4902">
+<area shape="rect" id="node34" href="aws_ec2_securitygroup.html" target="_top" title="aws_ec2_securitygroup" alt="" coords="2762,4919,3019,5124">
+<area shape="rect" id="node35" href="aws_ec2_snapshot.html" target="_top" title="aws_ec2_snapshot" alt="" coords="2750,2263,3031,2498">
+<area shape="rect" id="node36" href="aws_kms_key.html" target="_top" title="aws_kms_key" alt="" coords="2255,8124,2524,8300">
+<area shape="rect" id="node37" href="aws_ec2_volume.html" target="_top" title="aws_ec2_volume" alt="" coords="2275,2331,2504,2507">
+<area shape="rect" id="node38" href="aws_ec2_vpcpeeringconnection.html" target="_top" title="aws_ec2_vpcpeeringconnection" alt="" coords="2725,6494,3056,6728">
+<area shape="rect" id="node39" href="aws_ecr_repository.html" target="_top" title="aws_ecr_repository" alt="" coords="2236,1872,2543,2048">
+<area shape="rect" id="node40" href="aws_ecs_cluster.html" target="_top" title="aws_ecs_cluster" alt="" coords="2207,7787,2572,7963">
+<area shape="rect" id="node41" href="aws_ecs_service.html" target="_top" title="aws_ecs_service" alt="" coords="2721,7718,3061,7923">
+<area shape="rect" id="node42" href="aws_ecs_task.html" target="_top" title="aws_ecs_task" alt="" coords="2765,7940,3016,8146">
+<area shape="rect" id="node43" href="aws_ecs_taskdefinition.html" target="_top" title="aws_ecs_taskdefinition" alt="" coords="2261,2102,2518,2278">
+<area shape="rect" id="node44" href="aws_eks_cluster.html" target="_top" title="aws_eks_cluster" alt="" coords="2750,444,3031,650">
+<area shape="rect" id="node45" href="aws_eks_nodegroup.html" target="_top" title="aws_eks_nodegroup" alt="" coords="3267,386,3497,620">
+<area shape="rect" id="node46" href="aws_elasticbeanstalk_application.html" target="_top" title="aws_elasticbeanstalk_application" alt="" coords="2215,1643,2563,1819">
+<area shape="rect" id="node47" href="aws_elasticbeanstalk_applicationversion.html" target="_top" title="aws_elasticbeanstalk_applicationversion" alt="" coords="2683,1595,3098,1800">
+<area shape="rect" id="node48" href="aws_elasticbeanstalk_environment.html" target="_top" title="aws_elasticbeanstalk_environment" alt="" coords="3201,1483,3563,1747">
+<area shape="rect" id="node49" href="aws_elb_listener.html" target="_top" title="aws_elb_listener" alt="" coords="2776,9407,3005,9612">
+<area shape="rect" id="node50" href="aws_elb_loadbalancer.html" target="_top" title="aws_elb_loadbalancer" alt="" coords="2237,8920,2542,9096">
+<area shape="rect" id="node51" href="aws_elbv2_listener.html" target="_top" title="aws_elbv2_listener" alt="" coords="3267,7102,3497,7307">
+<area shape="rect" id="node52" href="aws_elbv2_loadbalancer.html" target="_top" title="aws_elbv2_loadbalancer" alt="" coords="2647,7178,3135,7383">
+<area shape="rect" id="node53" href="aws_elbv2_targetgroup.html" target="_top" title="aws_elbv2_targetgroup" alt="" coords="2693,6048,3089,6254">
+<area shape="rect" id="node54" href="aws_es_domain.html" target="_top" title="aws_es_domain" alt="" coords="2730,6271,3051,6476">
+<area shape="rect" id="node55" href="aws_iam_group.html" target="_top" title="aws_iam_group" alt="" coords="2275,9186,2504,9362">
+<area shape="rect" id="node56" href="aws_iam_grouppolicy.html" target="_top" title="aws_iam_grouppolicy" alt="" coords="2771,9666,3010,9871">
+<area shape="rect" id="node57" href="aws_iam_passwordpolicy.html" target="_top" title="aws_iam_passwordpolicy" alt="" coords="2231,2596,2547,2772">
+<area shape="rect" id="node58" href="aws_iam_policy.html" target="_top" title="aws_iam_policy" alt="" coords="2215,9451,2563,9627">
+<area shape="rect" id="node59" href="aws_iam_policyversion.html" target="_top" title="aws_iam_policyversion" alt="" coords="2765,10111,3017,10316">
+<area shape="rect" id="node60" href="aws_iam_rolepolicy.html" target="_top" title="aws_iam_rolepolicy" alt="" coords="2776,2560,3005,2766">
+<area shape="rect" id="node61" href="aws_iam_rootaccount.html" target="_top" title="aws_iam_rootaccount" alt="" coords="2269,2983,2510,3159">
+<area shape="rect" id="node62" href="aws_iam_signingcertificate.html" target="_top" title="aws_iam_signingcertificate" alt="" coords="2745,10556,3037,10762">
+<area shape="rect" id="node63" href="aws_iam_user.html" target="_top" title="aws_iam_user" alt="" coords="2223,9752,2555,9928">
+<area shape="rect" id="node64" href="aws_iam_userpolicy.html" target="_top" title="aws_iam_userpolicy" alt="" coords="2776,10334,3005,10539">
+<area shape="rect" id="node65" href="aws_lambda_alias.html" target="_top" title="aws_lambda_alias" alt="" coords="3267,7324,3497,7530">
+<area shape="rect" id="node66" href="aws_lambda_function.html" target="_top" title="aws_lambda_function" alt="" coords="2737,5688,3044,5923">
+<area shape="rect" id="node67" href="aws_lambda_functionversion.html" target="_top" title="aws_lambda_functionversion" alt="" coords="3228,4620,3536,4855">
+<area shape="rect" id="node68" href="aws_logs_metricfilter.html" target="_top" title="aws_logs_metricfilter" alt="" coords="2765,3368,3017,3574">
+<area shape="rect" id="node71" href="aws_organizations_organization.html" target="_top" title="aws_organizations_organization" alt="" coords="720,8516,1056,8663">
+<area shape="rect" id="node72" href="aws_rds_dbcluster.html" target="_top" title="aws_rds_dbcluster" alt="" coords="2205,8583,2574,8759">
+<area shape="rect" id="node73" href="aws_rds_dbclustersnapshot.html" target="_top" title="aws_rds_dbclustersnapshot" alt="" coords="2706,7436,3075,7700">
+<area shape="rect" id="node74" href="aws_rds_dbinstance.html" target="_top" title="aws_rds_dbinstance" alt="" coords="2693,9888,3088,10094">
+<area shape="rect" id="node75" href="aws_rds_dbsnapshot.html" target="_top" title="aws_rds_dbsnapshot" alt="" coords="3197,8956,3567,9220">
+<area shape="rect" id="node76" href="aws_redshift_cluster.html" target="_top" title="aws_redshift_cluster" alt="" coords="2675,6854,3107,7088">
+<area shape="rect" id="node77" href="aws_route53_hostedzone.html" target="_top" title="aws_route53_hostedzone" alt="" coords="2252,3248,2527,3424">
+<area shape="rect" id="node78" href="aws_ses_identity.html" target="_top" title="aws_ses_identity" alt="" coords="2684,8458,3097,8722">
+<area shape="rect" id="node79" href="aws_sns_topic.html" target="_top" title="aws_sns_topic" alt="" coords="2259,8354,2520,8530">
+<area shape="rect" id="node80" href="aws_sns_subscription.html" target="_top" title="aws_sns_subscription" alt="" coords="2728,8739,3053,8944">
+<area shape="rect" id="node81" href="aws_sqs_queue.html" target="_top" title="aws_sqs_queue" alt="" coords="2677,8962,3105,9167">
+<area shape="rect" id="node82" href="aws_ssm_parameter.html" target="_top" title="aws_ssm_parameter" alt="" coords="2775,9184,3006,9390">
+<area shape="rect" id="node83" href="resource_attribute.html" target="_top" title="resource_attribute" alt="" coords="773,8680,1003,8886">
+<area shape="rect" id="node84" href="resource_raw.html" target="_top" title="resource_raw" alt="" coords="773,8903,1003,9079">
+<area shape="rect" id="node85" href="resource_relation.html" target="_top" title="resource_relation" alt="" coords="773,8264,1003,8499">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/resource.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="aws_acm_certificate.html" target="_top" title="aws_acm_certificate" alt="" coords="3199,7554,3625,7730">
+<area shape="rect" id="node2" href="aws_organizations_account.html" target="_top" title="aws_organizations_account" alt="" coords="1891,6329,2185,6534">
+<area shape="rect" id="node3" href="resource.html" target="_top" title="resource" alt="" coords="253,6545,676,6849">
+<area shape="rect" id="node4" href="provider_account.html" target="_top" title="provider_account" alt="" coords="5,8630,209,8748">
+<area shape="rect" id="node93" href="aws_organizations_organizationalunit.html" target="_top" title="aws_organizations_organizationalunit" alt="" coords="1457,7433,1847,7638">
+<area shape="rect" id="node94" href="aws_organizations_root.html" target="_top" title="aws_organizations_root" alt="" coords="1127,7433,1387,7609">
+<area shape="rect" id="node5" href="aws_apigateway_restapi.html" target="_top" title="aws_apigateway_restapi" alt="" coords="2279,6912,2573,7088">
+<area shape="rect" id="node6" href="aws_apigateway_stage.html" target="_top" title="aws_apigateway_stage" alt="" coords="2783,6957,3038,7162">
+<area shape="rect" id="node7" href="aws_apigatewayv2_api.html" target="_top" title="aws_apigatewayv2_api" alt="" coords="2279,7564,2573,7740">
+<area shape="rect" id="node8" href="aws_apigatewayv2_stage.html" target="_top" title="aws_apigatewayv2_stage" alt="" coords="2748,7321,3073,7526">
+<area shape="rect" id="node9" href="aws_autoscaling_autoscalinggroup.html" target="_top" title="aws_autoscaling_autoscalinggroup" alt="" coords="3763,7934,4129,8169">
+<area shape="rect" id="node10" href="aws_iam_role.html" target="_top" title="aws_iam_role" alt="" coords="2278,7757,2574,7933">
+<area shape="rect" id="node11" href="aws_autoscaling_launchconfiguration.html" target="_top" title="aws_autoscaling_launchconfiguration" alt="" coords="3219,7917,3605,8152">
+<area shape="rect" id="node12" href="aws_ec2_image.html" target="_top" title="aws_ec2_image" alt="" coords="2304,9237,2548,9413">
+<area shape="rect" id="node13" href="aws_iam_instanceprofile.html" target="_top" title="aws_iam_instanceprofile" alt="" coords="2777,7910,3045,8116">
+<area shape="rect" id="node14" href="aws_autoscaling_launchconfiguration_ec2_securitygroup.html" target="_top" title="aws_autoscaling_launchconfiguration_ec2_securitygroup" alt="" coords="3704,4516,4188,4604">
+<area shape="rect" id="node15" href="aws_ec2_securitygroup.html" target="_top" title="aws_ec2_securitygroup" alt="" coords="2782,4302,3039,4508">
+<area shape="rect" id="node35" href="aws_ec2_vpc.html" target="_top" title="aws_ec2_vpc" alt="" coords="2276,3277,2576,3453">
+<area shape="rect" id="node16" href="aws_cloudformation_stack.html" target="_top" title="aws_cloudformation_stack" alt="" coords="2756,7616,3065,7821">
+<area shape="rect" id="node17" href="aws_cloudformation_stack_sns_topic.html" target="_top" title="aws_cloudformation_stack_sns_topic" alt="" coords="3240,7449,3584,7537">
+<area shape="rect" id="node18" href="aws_sns_topic.html" target="_top" title="aws_sns_topic" alt="" coords="2295,5746,2557,5922">
+<area shape="rect" id="node19" href="aws_cloudfront_distribution.html" target="_top" title="aws_cloudfront_distribution" alt="" coords="2265,4109,2587,4285">
+<area shape="rect" id="node20" href="aws_cloudtrail_trail.html" target="_top" title="aws_cloudtrail_trail" alt="" coords="2725,1949,3097,2184">
+<area shape="rect" id="node21" href="aws_logs_loggroup.html" target="_top" title="aws_logs_loggroup" alt="" coords="2311,2036,2541,2212">
+<area shape="rect" id="node22" href="aws_s3_bucket.html" target="_top" title="aws_s3_bucket" alt="" coords="2289,2818,2563,2994">
+<area shape="rect" id="node23" href="aws_cloudwatch_compositealarm.html" target="_top" title="aws_cloudwatch_compositealarm" alt="" coords="2229,4302,2623,4478">
+<area shape="rect" id="node24" href="aws_cloudwatch_metric.html" target="_top" title="aws_cloudwatch_metric" alt="" coords="2295,1590,2557,1766">
+<area shape="rect" id="node25" href="aws_cloudwatch_metricalarm.html" target="_top" title="aws_cloudwatch_metricalarm" alt="" coords="2714,1690,3107,1896">
+<area shape="rect" id="node26" href="aws_cloudwatch_metricalarm_sns_topic.html" target="_top" title="aws_cloudwatch_metricalarm_sns_topic" alt="" coords="3231,1693,3593,1781">
+<area shape="rect" id="node27" href="aws_config_configurationrecorder.html" target="_top" title="aws_config_configurationrecorder" alt="" coords="2733,8241,3088,8446">
+<area shape="rect" id="node28" href="aws_dynamodb_backup.html" target="_top" title="aws_dynamodb_backup" alt="" coords="2776,10070,3045,10276">
+<area shape="rect" id="node29" href="aws_dynamodb_table.html" target="_top" title="aws_dynamodb_table" alt="" coords="2259,10262,2593,10438">
+<area shape="rect" id="node30" href="aws_ec2_address.html" target="_top" title="aws_ec2_address" alt="" coords="4400,4966,4677,5201">
+<area shape="rect" id="node31" href="aws_ec2_instance.html" target="_top" title="aws_ec2_instance" alt="" coords="3209,6106,3615,6400">
+<area shape="rect" id="node32" href="aws_ec2_networkinterface.html" target="_top" title="aws_ec2_networkinterface" alt="" coords="3803,4093,4089,4357">
+<area shape="rect" id="node36" href="aws_ec2_subnet.html" target="_top" title="aws_ec2_subnet" alt="" coords="2745,2201,3076,2406">
+<area shape="rect" id="node33" href="aws_ec2_defaults.html" target="_top" title="aws_ec2_defaults" alt="" coords="2294,4496,2558,4672">
+<area shape="rect" id="node34" href="aws_ec2_flowlog.html" target="_top" title="aws_ec2_flowlog" alt="" coords="2772,3920,3049,4213">
+<area shape="rect" id="node37" href="aws_ec2_instance_securitygroup.html" target="_top" title="aws_ec2_instance_securitygroup" alt="" coords="3789,4410,4103,4498">
+<area shape="rect" id="node38" href="aws_ec2_instance_volume.html" target="_top" title="aws_ec2_instance_volume" alt="" coords="3813,7248,4079,7336">
+<area shape="rect" id="node39" href="aws_ec2_volume.html" target="_top" title="aws_ec2_volume" alt="" coords="2311,7298,2541,7474">
+<area shape="rect" id="node40" href="aws_ec2_keypair.html" target="_top" title="aws_ec2_keypair" alt="" coords="2311,4689,2541,4865">
+<area shape="rect" id="node41" href="aws_ec2_networkinterface_securitygroup.html" target="_top" title="aws_ec2_networkinterface_securitygroup" alt="" coords="4353,4096,4724,4184">
+<area shape="rect" id="node42" href="aws_ec2_routetable.html" target="_top" title="aws_ec2_routetable" alt="" coords="2796,4784,3025,4989">
+<area shape="rect" id="node43" href="aws_ec2_snapshot.html" target="_top" title="aws_ec2_snapshot" alt="" coords="2770,6597,3051,6832">
+<area shape="rect" id="node44" href="aws_kms_key.html" target="_top" title="aws_kms_key" alt="" coords="2291,2301,2561,2477">
+<area shape="rect" id="node45" href="aws_ec2_vpcpeeringconnection.html" target="_top" title="aws_ec2_vpcpeeringconnection" alt="" coords="2745,3668,3076,3902">
+<area shape="rect" id="node46" href="aws_ecr_repository.html" target="_top" title="aws_ecr_repository" alt="" coords="2273,8706,2579,8882">
+<area shape="rect" id="node47" href="aws_ecs_cluster.html" target="_top" title="aws_ecs_cluster" alt="" coords="2243,10492,2609,10668">
+<area shape="rect" id="node48" href="aws_ecs_service.html" target="_top" title="aws_ecs_service" alt="" coords="2741,10293,3081,10498">
+<area shape="rect" id="node49" href="aws_ecs_task.html" target="_top" title="aws_ecs_task" alt="" coords="2785,10516,3036,10721">
+<area shape="rect" id="node50" href="aws_ecs_taskdefinition.html" target="_top" title="aws_ecs_taskdefinition" alt="" coords="2297,8900,2555,9076">
+<area shape="rect" id="node51" href="aws_eks_cluster.html" target="_top" title="aws_eks_cluster" alt="" coords="2770,5942,3051,6148">
+<area shape="rect" id="node52" href="aws_eks_nodegroup.html" target="_top" title="aws_eks_nodegroup" alt="" coords="3297,5377,3527,5612">
+<area shape="rect" id="node53" href="aws_eks_nodegroup_ec2_subnet.html" target="_top" title="aws_eks_nodegroup_ec2_subnet" alt="" coords="3789,2168,4103,2256">
+<area shape="rect" id="node54" href="aws_elasticbeanstalk_application.html" target="_top" title="aws_elasticbeanstalk_application" alt="" coords="2252,10914,2600,11090">
+<area shape="rect" id="node55" href="aws_elasticbeanstalk_applicationversion.html" target="_top" title="aws_elasticbeanstalk_applicationversion" alt="" coords="2703,10961,3118,11166">
+<area shape="rect" id="node56" href="aws_elasticbeanstalk_environment.html" target="_top" title="aws_elasticbeanstalk_environment" alt="" coords="3231,9562,3593,9826">
+<area shape="rect" id="node57" href="aws_elasticbeanstalk_environment_autoscaling_autoscalinggroup.html" target="_top" title="aws_elasticbeanstalk_environment_autoscaling_autoscalinggroup" alt="" coords="4267,9565,4811,9653">
+<area shape="rect" id="node58" href="aws_elasticbeanstalk_environment_autoscaling_launchconfiguratio.html" target="_top" title="aws_elasticbeanstalk_environment_autoscaling_launchconfiguratio" alt="" coords="3669,9638,4223,9726">
+<area shape="rect" id="node59" href="aws_elasticbeanstalk_environment_ec2_instance.html" target="_top" title="aws_elasticbeanstalk_environment_ec2_instance" alt="" coords="3735,9497,4157,9585">
+<area shape="rect" id="node60" href="aws_elb_listener.html" target="_top" title="aws_elb_listener" alt="" coords="2796,10738,3025,10944">
+<area shape="rect" id="node61" href="aws_elb_loadbalancer.html" target="_top" title="aws_elb_loadbalancer" alt="" coords="2273,10685,2579,10861">
+<area shape="rect" id="node62" href="aws_elbv2_listener.html" target="_top" title="aws_elbv2_listener" alt="" coords="3297,6453,3527,6658">
+<area shape="rect" id="node63" href="aws_elbv2_loadbalancer.html" target="_top" title="aws_elbv2_loadbalancer" alt="" coords="2667,4561,3155,4766">
+<area shape="rect" id="node64" href="aws_elbv2_listener_acm_certificate.html" target="_top" title="aws_elbv2_listener_acm_certificate" alt="" coords="3783,7557,4109,7645">
+<area shape="rect" id="node65" href="aws_elbv2_loadbalancer_ec2_securitygroup.html" target="_top" title="aws_elbv2_loadbalancer_ec2_securitygroup" alt="" coords="3217,4269,3607,4357">
+<area shape="rect" id="node66" href="aws_elbv2_targetgroup.html" target="_top" title="aws_elbv2_targetgroup" alt="" coords="2713,1468,3109,1673">
+<area shape="rect" id="node67" href="aws_elbv2_targetgroup_loadbalancer.html" target="_top" title="aws_elbv2_targetgroup_loadbalancer" alt="" coords="3241,1470,3583,1558">
+<area shape="rect" id="node68" href="aws_es_domain.html" target="_top" title="aws_es_domain" alt="" coords="2750,3186,3071,3392">
+<area shape="rect" id="node69" href="aws_es_domain_ec2_securitygroup.html" target="_top" title="aws_es_domain_ec2_securitygroup" alt="" coords="3247,3064,3577,3152">
+<area shape="rect" id="node70" href="aws_es_domain_ec2_subnet.html" target="_top" title="aws_es_domain_ec2_subnet" alt="" coords="3272,2277,3552,2365">
+<area shape="rect" id="node71" href="aws_iam_group.html" target="_top" title="aws_iam_group" alt="" coords="2311,9660,2541,9836">
+<area shape="rect" id="node72" href="aws_iam_group_user.html" target="_top" title="aws_iam_group_user" alt="" coords="2796,9426,3025,9514">
+<area shape="rect" id="node73" href="aws_iam_user.html" target="_top" title="aws_iam_user" alt="" coords="2260,9466,2592,9642">
+<area shape="rect" id="node74" href="aws_iam_grouppolicy.html" target="_top" title="aws_iam_grouppolicy" alt="" coords="2791,9168,3030,9373">
+<area shape="rect" id="node75" href="aws_iam_passwordpolicy.html" target="_top" title="aws_iam_passwordpolicy" alt="" coords="2268,3722,2584,3898">
+<area shape="rect" id="node76" href="aws_iam_policy.html" target="_top" title="aws_iam_policy" alt="" coords="2252,9853,2600,10029">
+<area shape="rect" id="node77" href="aws_iam_policy_group.html" target="_top" title="aws_iam_policy_group" alt="" coords="2790,9742,3031,9830">
+<area shape="rect" id="node78" href="aws_iam_policy_role.html" target="_top" title="aws_iam_policy_role" alt="" coords="2798,9532,3023,9620">
+<area shape="rect" id="node79" href="aws_iam_policy_user.html" target="_top" title="aws_iam_policy_user" alt="" coords="2796,9637,3025,9725">
+<area shape="rect" id="node80" href="aws_iam_policyversion.html" target="_top" title="aws_iam_policyversion" alt="" coords="2785,9848,3037,10053">
+<area shape="rect" id="node81" href="aws_iam_rolepolicy.html" target="_top" title="aws_iam_rolepolicy" alt="" coords="2796,8464,3025,8669">
+<area shape="rect" id="node82" href="aws_iam_rootaccount.html" target="_top" title="aws_iam_rootaccount" alt="" coords="2305,3916,2547,4092">
+<area shape="rect" id="node83" href="aws_iam_signingcertificate.html" target="_top" title="aws_iam_signingcertificate" alt="" coords="2765,8686,3057,8892">
+<area shape="rect" id="node84" href="aws_iam_userpolicy.html" target="_top" title="aws_iam_userpolicy" alt="" coords="2796,8909,3025,9114">
+<area shape="rect" id="node85" href="aws_lambda_alias.html" target="_top" title="aws_lambda_alias" alt="" coords="3297,5080,3527,5285">
+<area shape="rect" id="node86" href="aws_lambda_function.html" target="_top" title="aws_lambda_function" alt="" coords="2757,5042,3064,5277">
+<area shape="rect" id="node87" href="aws_lambda_alias_functionversion.html" target="_top" title="aws_lambda_alias_functionversion" alt="" coords="3783,5082,4109,5170">
+<area shape="rect" id="node88" href="aws_lambda_functionversion.html" target="_top" title="aws_lambda_functionversion" alt="" coords="3258,5668,3566,5902">
+<area shape="rect" id="node89" href="aws_lambda_function_ec2_securitygroup.html" target="_top" title="aws_lambda_function_ec2_securitygroup" alt="" coords="3227,4482,3597,4570">
+<area shape="rect" id="node90" href="aws_lambda_function_ec2_subnet.html" target="_top" title="aws_lambda_function_ec2_subnet" alt="" coords="3251,2382,3573,2470">
+<area shape="rect" id="node91" href="aws_logs_metricfilter.html" target="_top" title="aws_logs_metricfilter" alt="" coords="2785,957,3037,1162">
+<area shape="rect" id="node92" href="aws_logs_metricfilter_cloudwatch_metric.html" target="_top" title="aws_logs_metricfilter_cloudwatch_metric" alt="" coords="3227,848,3597,936">
+<area shape="rect" id="node95" href="aws_organizations_organization.html" target="_top" title="aws_organizations_organization" alt="" coords="720,8261,1056,8408">
+<area shape="rect" id="node96" href="aws_rds_dbcluster.html" target="_top" title="aws_rds_dbcluster" alt="" coords="2241,3048,2611,3224">
+<area shape="rect" id="node97" href="aws_rds_dbcluster_ec2_securitygroup.html" target="_top" title="aws_rds_dbcluster_ec2_securitygroup" alt="" coords="3237,3594,3587,3682">
+<area shape="rect" id="node98" href="aws_rds_dbclustersnapshot.html" target="_top" title="aws_rds_dbclustersnapshot" alt="" coords="2726,2905,3095,3169">
+<area shape="rect" id="node99" href="aws_rds_dbinstance.html" target="_top" title="aws_rds_dbinstance" alt="" coords="2713,3409,3108,3614">
+<area shape="rect" id="node100" href="aws_rds_dbinstance_ec2_securitygroup.html" target="_top" title="aws_rds_dbinstance_ec2_securitygroup" alt="" coords="3231,3450,3593,3538">
+<area shape="rect" id="node101" href="aws_rds_dbsnapshot.html" target="_top" title="aws_rds_dbsnapshot" alt="" coords="3227,3169,3597,3433">
+<area shape="rect" id="node102" href="aws_redshift_cluster.html" target="_top" title="aws_redshift_cluster" alt="" coords="2695,1216,3127,1450">
+<area shape="rect" id="node103" href="aws_redshift_cluster_ec2_securitygroup.html" target="_top" title="aws_redshift_cluster_ec2_securitygroup" alt="" coords="3230,1218,3594,1306">
+<area shape="rect" id="node104" href="aws_route53_hostedzone.html" target="_top" title="aws_route53_hostedzone" alt="" coords="2289,7105,2563,7281">
+<area shape="rect" id="node105" href="aws_route53_hostedzone_ec2_vpc.html" target="_top" title="aws_route53_hostedzone_ec2_vpc" alt="" coords="2749,7180,3072,7268">
+<area shape="rect" id="node106" href="aws_ses_identity.html" target="_top" title="aws_ses_identity" alt="" coords="2704,5294,3117,5558">
+<area shape="rect" id="node107" href="aws_sns_subscription.html" target="_top" title="aws_sns_subscription" alt="" coords="2748,5648,3073,5853">
+<area shape="rect" id="node108" href="aws_sqs_queue.html" target="_top" title="aws_sqs_queue" alt="" coords="2697,2424,3125,2629">
+<area shape="rect" id="node109" href="aws_ssm_parameter.html" target="_top" title="aws_ssm_parameter" alt="" coords="2795,2682,3026,2888">
+<area shape="rect" id="node110" href="import_job.html" target="_top" title="import_job" alt="" coords="386,12116,543,12204">
+<area shape="rect" id="node111" href="mapped_uri.html" target="_top" title="mapped_uri" alt="" coords="1175,12080,1339,12168">
+<area shape="rect" id="node112" href="raw_import.html" target="_top" title="raw_import" alt="" coords="808,12080,968,12168">
+<area shape="rect" id="node113" href="provider_credential.html" target="_top" title="provider_credential" alt="" coords="356,12257,573,12345">
+<area shape="rect" id="node114" href="resource_attribute.html" target="_top" title="resource_attribute" alt="" coords="773,8425,1003,8630">
+<area shape="rect" id="node115" href="resource_attribute_delta.html" target="_top" title="resource_attribute_delta" alt="" coords="1131,12256,1383,12344">
+<area shape="rect" id="node116" href="resource_delta.html" target="_top" title="resource_delta" alt="" coords="795,12221,981,12309">
+<area shape="rect" id="node117" href="resource_raw.html" target="_top" title="resource_raw" alt="" coords="773,8648,1003,8824">
+<area shape="rect" id="node118" href="resource_relation.html" target="_top" title="resource_relation" alt="" coords="773,8009,1003,8244">
+<area shape="rect" id="node119" href="resource_relation_attribute.html" target="_top" title="resource_relation_attribute" alt="" coords="329,12504,600,12592">
+<area shape="rect" id="node120" href="resource_relation_attribute_delta.html" target="_top" title="resource_relation_attribute_delta" alt="" coords="1100,12413,1413,12501">
+<area shape="rect" id="node121" href="resource_relation_delta.html" target="_top" title="resource_relation_delta" alt="" coords="765,12362,1011,12450">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/resource.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
